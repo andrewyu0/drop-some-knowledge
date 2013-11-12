@@ -18,13 +18,13 @@ function solution(str, ending) {
 
 // check to see if last characters array match w each other, loop
 for (var i = endingArray.length, i = strArray.length; i > 0; i-- ) { //two intializers?
-  
 
-  if (endingArray[(endingArray.length)-1] == strArray[]) {
-      
+  if (endingArray[(endingArray.length)-1] == strArray[(strArray.length)-1]) {
+    
       // if i != 0 , keep looping
-    }
-    // you keep looping an realize that before it hits zero 
+    
+      // you keep looping an realize that before it hits zero 
+    
     else if (endingArray[i] =! strArray[i]) {
     return false;
 
