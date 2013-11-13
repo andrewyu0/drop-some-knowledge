@@ -1,4 +1,5 @@
 // Nov 12 
+// "String ends with?"
 
 // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
@@ -8,30 +9,26 @@
 // solution('abc, 'd') // returns false
 
 
+solution('abcde','zcde')
+
 // Initial Thoughts
 
 function solution(str, ending) {
-// make the strings arrays 
+  // make the strings arrays 
   var strArray = str.split();
   var endingArray = ending.split();
 
-
-// check to see if last characters array match w each other, loop
-for (var i = endingArray.length, i = strArray.length; i > 0; i-- ) { //two intializers?
-
-  if (endingArray[(endingArray.length)-1] == strArray[(strArray.length)-1]) {
-    
-      // if i != 0 , keep looping
-    
-      // you keep looping an realize that before it hits zero 
-    
-    else if (endingArray[i] =! strArray[i]) {
+for (var endCount = endingArray.length - 1, strCount = strArray.length - 1; endCount > 0; i-- ) { 
+    if (endingArray[endCount] != strArray[strCount]) {
     return false;
-
-    //if it holds true throughout the whole loop
-    return true; 
-
-    else {
-    return false; //this is when the last letters dont match right off the bat
   }
+
+  return true;
 }
+
+// Top voted solution 
+
+function solution(str, ending){
+  return str.substring(str.length - ending.length) == ending;
+}
+
