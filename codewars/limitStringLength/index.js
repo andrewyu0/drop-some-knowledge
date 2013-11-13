@@ -19,3 +19,9 @@ function solution(string,limit){
     return newString + "...";  
   }
 }
+
+//highest voted answer
+
+function solution(string,limit){
+    return string.length > limit ? string.substr(0,limit) + "..." : string;
+}
