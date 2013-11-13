@@ -14,15 +14,13 @@ solution('abcde','zcde')
 // Initial Thoughts
 
 function solution(str, ending) {
-  // make the strings arrays 
   var strArray = str.split();
   var endingArray = ending.split();
 
-for (var endCount = endingArray.length - 1, strCount = strArray.length - 1; endCount > 0; i-- ) { 
-    if (endingArray[endCount] != strArray[strCount]) {
-    return false;
+for (var endCount = endingArray.length - 1, strCount = strArray.length - 1; endCount >= 0; strCount--, endCount--) { 
+    if (endingArray[endCount] !== strArray[strCount]) {
+    return false; }
   }
-
   return true;
 }
 
