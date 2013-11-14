@@ -13,7 +13,7 @@
 // The "date" property of the log entry should be a valid JS Date
 // object.
 
-// Example 
+// Example
 
 //new Date() == '2013-09-24...Z'
 var arc = new Archiver();
@@ -36,7 +36,7 @@ function Archiver() {
     //...set, that the array returned by getArchive
     //...gets a log entry in the form of {date:,val:}
     this.getArchive = function() {
-      archive.push(" date:" + date + ", val:" + temperature);
+      archive.push(" date:" + new Date() + ", val:" + temperature);
       return archive;
     };
 }

@@ -9,14 +9,12 @@
 // solution('abc, 'd') // returns false
 
 
-solution('abcde','zcde')
-
 // Initial Thoughts
 
 function solution(str, ending) {
 
-  var strArray = str.split();
-  var endingArray = ending.split();
+  var strArray = str.split("");
+  var endingArray = ending.split("");
 
   for (var endCount = endingArray.length - 1, strCount = strArray.length - 1; endCount >= 0; strCount--, endCount--) {
     if (endingArray[endCount] !== strArray[strCount]) {
@@ -32,3 +30,5 @@ function solution(str, ending){
   return str.substring(str.length - ending.length) == ending;
 }
 
+// Also - you can treat a string like an array
+// so "abc".length = 3 and "abc"[1] = "b"
