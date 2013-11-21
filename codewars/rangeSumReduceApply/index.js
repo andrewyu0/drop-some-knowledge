@@ -25,6 +25,7 @@ Array.prototype.sum = function() {
   return x ;
 } 
 
+
 -------------
 
 // my attempt, try to create Array.prototype.sum that does not use for loops 
