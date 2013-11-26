@@ -26,6 +26,6 @@ function getEvenNumbers(numbersArray){
 
 function getEvenNumbers(numbersArray){
   return numbersArray.filter(function(n){
-    return n % 2 == 0;
+    return n % 2 == 0; // this returns true, keep it concise
   });
 }

@@ -15,7 +15,7 @@ var newArray = [];
     newArray.push(i);
     }
   return newArray;
-}
+};
 
 Array.prototype.sum = function() {
   var x = 0;
@@ -38,6 +38,9 @@ Array.prototype.sum = function() {
     return a + b;
   });
 }
+
+
+[1,2,3].sum();
 // returns undefined
 
 ---------------
@@ -49,7 +52,7 @@ Array.range = function(start, count){
 }
 
 Array.prototype.sum = function(){
-  return this.reduce(function(s,v){return s + v}, 0) 
+  return this.reduce(function(s,v){return s + v}, 0) // reduce(callback, init)
 }
 // zero is the intial value, if you didn't declare it (like in my attempt) it wouldn't know what to add to. So if you pass the 0 it will know to add to that 0 for each return 
 

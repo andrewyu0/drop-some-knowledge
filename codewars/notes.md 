@@ -1,9 +1,9 @@
 Chronology:
 
 Nov 8 
-arraysFilter, repeat, rangeSumReduceApply
+arraysFilter, repeat, rangeSumReduceApply (reduce intro'd here)
 
---
+---
 
 Nov 11
 classObjects 
@@ -20,13 +20,26 @@ filter (great one, revisit)
 Nov 15
 Finishing up filter
 
---
+---
 
 Nov 19
-Filter 3, customArrayMethod (great one, revisit steps outlined) 
+Filter 3, customArrayMethod (great one, revisit steps outlined)
 
 Nov 20
 Began philter
 
 Nov 21
-Completed  philter, creating_reduse, creating_map, ArrayHelpers  
+Extending prototype of Array, recreating filter/reduce/map
+Lots of Regex
+
+Completed  philter, creating_reduse, creating_map, ArrayHelpers, trimString (lots of regex)  
+
+Nov 22
+OVERALL REVIEW
+
+reverseWords
+
+-- 
+
+Nov 25
+substrCount, palindrome

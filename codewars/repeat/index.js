@@ -13,5 +13,5 @@ EXERCISE 1: "Dont make me repeat myself"
 // Top voted solution 
 
 String.prototype.repeat = function(count) {
-  return new Array(count + 1).join(this);
+  return new Array(count + 1).join(this); // running count function through string prototype
 };
