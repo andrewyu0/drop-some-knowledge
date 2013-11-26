@@ -9,12 +9,13 @@
 // solution('aaabbbcccc', 'bbb') # should return 1
 
 
-// Solution
+// SOLUTION
 function solution(fullText, searchText){
   return fullText.split(searchText).length - 1;
 }
 
 solution('aa_bb_cc_dd_bb_e', 'bb'); //3
+solution("there are a lot of re in this sentence. re", "re"); // 4 
 
 // CONCEPTS
 
