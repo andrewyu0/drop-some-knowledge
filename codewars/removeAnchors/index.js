@@ -12,9 +12,9 @@
 // removeUrlAnchor('www.codewars.com?page=1')
 
 
-function removeUrlAnchors(url){
+// My Solution
+function removeUrlAnchor(url){
   return url.split('#')[0];
 };
 
- removeUrlAnchor('www.codewars.com#about')
-
+removeUrlAnchor('www.codewars.com#about')
