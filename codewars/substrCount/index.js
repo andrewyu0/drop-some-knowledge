@@ -20,14 +20,14 @@ solution("there are a lot of re in this sentence. re", "re"); // 4
 // CONCEPTS
 
 // string.match
-var f = "This is a string.";
+var fullString = "This is a string.";
 // the g searches whole string, beyond first occurance
-var s = f.match(/is/g);  
-console.log(s.length); // 2, actually counts the number of times 
+var searchText = fullString.match(/is/g);  
+console.log(searchText.length); // 2, actually counts the number of times 
 
 // Replacing regex with a variable in string.match
-var f = "the whole thing the";
-var s = "the";
+var fullString = "the whole thing the";
+var searchText = "the";
 var count = f.match(s);
 console.log(count); // ["the"], only returns the one instance 
 
