@@ -60,17 +60,17 @@ var Dog  = function(breed) {
 };
 
 // 2 ways to create the fetch function on an Object 'class'
+
+// First way:
 // This will SET the prototype
 Dog.prototype.jump = function(){}; // Jump Exists
-Dog.prototype = {
+Dog.prototype      = {
   fetch : function() {
-
   },
   aJump : function() {
-
   }
 };
-// Catch doesn't exist
+// No catch exists yet
 
 Dog.prototype.catch = function() {
 
@@ -82,7 +82,8 @@ Dog.prototype.catch = function() {
 // Catch will exist because its defined after we set the prototype
 // After Setting the prototype 'jump' will no longer exist
 
-// This will ADD fetch to the prototyp
+// Second way:
+// This will ADD fetch to the prototype
 Dog.prototype.fetch = function() {
 
 };
@@ -91,7 +92,7 @@ Dog.prototype.jump = function() {
 
 };
 
-// Instanciating 2 different Dogs
+// Instantiating 2 different Dogs
 var germanShep  = new Dog('German Shperd');
 germanShep.fetch();
 
