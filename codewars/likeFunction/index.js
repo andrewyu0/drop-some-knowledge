@@ -37,6 +37,7 @@ likes(['Alex', 'Jacob', 'Mark', 'Max']); // "Alex, Jacob and 2 others like this"
 // Highest rated solution
 
 function likes(names) {
+  // names[0] converted to boolean, if truthy, return names[0]. if falsy, return "no one"
   names[0] = names[0] || "no one";
   if (names.length > 3) names[2] = names.length-2 + " others";
   return names.slice(0,3).join(", ").replace(/(.*), /, "$1 and ") + " like" + (names.length<2 ? "s" : "") + " this";
