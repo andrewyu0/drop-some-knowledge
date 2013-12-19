@@ -46,3 +46,49 @@ Function.prototype.wrap = function(callback){
 
 
 
+
+
+Function.prototype.wrap = function(){
+  var original = this; // because we call it on the function itself
+  // let's copy the rest from makeSafe()
+  return function(){
+    try{
+      return original.apply(this, arguments);
+    }catch(ex){
+      ErrorHandler.Exception(ex);
+    }
+  };
+};
+
+// allows you to bind the 'this' param (the first param) as well as any 
+var a = function(p1, p2) {
+  console.log(p1+":"+p2);
+}
+
+//p1 becomes andrew every time a is called 
+a = a.bind(a, 'Andrew');
+a('Jason');
+
+
+
+
+//
+Function.prototype.wrap = function(callback) {
+  var original = this;
+  return callback.bind(callback, original);
+};
+
+
+
+
+
+// Highest rated
+
+Function.prototype.wrap = function(callback) {
+  var self = this;
+  return callback.bind(undefined, self);
+}; 
+
+
+
+
