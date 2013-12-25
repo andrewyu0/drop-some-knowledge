@@ -21,10 +21,42 @@ meregesorted([1,2],[3,4]) // [1,2,3,4]
 */
 
 
-function mergesorted(a, b){
-  var array = [];
-  for (var i = 0; i < a.length; )
+function mergeSorted(left, right){
+  var resultArray = [];
+  var leftLength = left.length;
+  var rightLength = right.length;
 
+  for (leftIndex = 0, rightIndex = 0; leftIndex < leftLength || rightIndex < rightLength;) {
 
-  return array;
+    if (leftIndex < leftLength && rightIndex < rightLength) {
+      if (left[leftIndex] <= right[rightIndex]) {
+        resultArray.push(left[leftIndex]);
+        leftIndex++;
+      } else {
+        resultArray.push(right[rightIndex]);
+        rightIndex++
+      }
+
+    } else if (leftIndex < leftLength){
+      resultArray.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      resultArray.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+  return resultArray;
+}
+
+mergeSorted([1,2],[3,4,5,6]);
+
+// Highest Rated
+
+function mergesorted(a, b) {
+   var ret = [];
+   while (a.length && b.length)
+   {
+     ret.push((a[0] < b[0] ? a.shift() : b.shift()));
+   }
+  return ret.concat((a.length ? a : b));
 }
