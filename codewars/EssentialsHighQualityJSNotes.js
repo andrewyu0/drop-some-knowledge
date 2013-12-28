@@ -40,3 +40,32 @@ var a = (b = 0);
 
 /* Side effects when forgetting var */
 
+// implied globals created without var can be deleted 
+
+// define three globals
+var global_var = 1;
+global_novar = 2; // antipattern
+( function() {
+  global_fromfunc = 3; // antipattern
+}());
+
+// attempt to delete 
+delete global_var; // false
+delete global_novar; // true
+delete global_fromfunc; // true 
+
+
+/* Single var Pattern */ 
+
+// many advantages to using single var statement at top of functions 
+
+function func() {
+  var a = 1,
+      b = 2,
+      sum = a + b,
+      myObject = {},
+      i,
+      j;
+  // function body
+}
+
