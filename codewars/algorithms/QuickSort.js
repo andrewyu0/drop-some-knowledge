@@ -13,7 +13,7 @@ function swapElements(array, indexI, indexJ) {
 function partition(arrayOfNumbers, first, last, pivotIndex) {
     var pivotValue = arrayOfNumbers[pivotIndex];
 
-    // Move pivot element to the last spot
+    // Move pivot element to the last spotµ
     swapElements(arrayOfNumbers, pivotIndex, last);
 
     var i = first; 
@@ -33,7 +33,8 @@ function partition(arrayOfNumbers, first, last, pivotIndex) {
 
 function QuickSortRandomPivot(arrayOfNumbers, first, last) {
     if( first < last ) {
-        var pivotIndex = getRandomInt(first, last);
+        // this determines P, the pivot
+        var pivotIndex = arrayOfNumbers[Math.floor((first + last) / 2)];
         var newPivotIndex = partition(arrayOfNumbers, first, last, pivotIndex);
         QuickSortRandomPivot(arrayOfNumbers, first, newPivotIndex-1);
         QuickSortRandomPivot(arrayOfNumbers, newPivotIndex+1, last);
@@ -41,4 +42,7 @@ function QuickSortRandomPivot(arrayOfNumbers, first, last) {
     return arrayOfNumbers;
 }
 
-var sortedNumbers = QuickSortRandomPivot([10, 1, 9, 2, 8, 3, 7, 4, 6, 5], 0, numbersArray.length-1);
+var arrayOfNumbers = [10, 1, 9, 2, 8, 3, 7, 4, 6, 5];
+var sortedNumbers = QuickSortRandomPivot(arrayOfNumbers, 0, arrayOfNumbers.length-1);
+
+console.log(sortedNumbers);
