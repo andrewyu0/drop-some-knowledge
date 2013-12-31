@@ -69,3 +69,15 @@ function func() {
   // function body
 }
 
+/* Hoisting: A Problem with Scattered vars */
+
+// For JavaScript, as long as a variable is in the same scope (same function), it’s considered declared, even when it’s used before the var declaration. Take a look at this example:
+
+// antipattern   
+myname = "global"; // global variable   
+function func() {  
+    alert(myname); // "undefined" - bc myname is considered declared as a local var of the function, even if it comes after  
+    var myname = "local";   
+    alert(myname); // "local"  
+}   
+func();  
