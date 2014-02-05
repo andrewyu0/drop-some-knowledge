@@ -81,3 +81,10 @@ function func() {
     alert(myname); // "local"  
 }   
 func();  
+
+/****** for Loops ******/
+
+// Tips on how to effectively use the iterator
+
+/****** for in Loops ******/
+

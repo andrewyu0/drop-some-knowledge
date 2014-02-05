@@ -1,0 +1,190 @@
+<!-- You can think of an HTML document as a tree: elements "branch out" from the main trunk (the <html></html> tags). The first two big branches are <head> and <body>, and branches multiply and become finer as you get to elements like <div>s, <table>s, and text (headers and paragraphs). -->
+
+<!DOCTYPE html>
+<html> <!--The trunk of the tree!-->
+  <head> <!--Child of html, parent of title,
+       sibling of body-->
+    <title></title> <!--Immediate child of head,
+            child of head AND html-->
+  </head>
+  <body> <!--Child of html, parent of p,
+       sibling of head-->
+    <p></p> <!--Immediate child of body,
+        child of body AND html-->
+  </body>
+</html>
+
+<!-- // HTML files will always have head and body 
+// Tags, element = <opening tag> + content + <closing tag>
+// Body goes between html tags but not the header
+// Paragraphs and headings (p, h1 etc )
+// <img src = >
+// <a> tag makes hyper links. Put between body  
+
+
+// Always need these tags
+ -->
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body></body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Headings & Paragraphs
+    </title>
+  </head>
+  <body>
+    <h1> This is the header </h1>
+        <p> and this is a paragraph</p>
+          <a href="www.facebook.com">
+          <img src="http://s3.amazonaws.com/codecademy-blog/assets/f3a16fb6.jpg" /> </a>
+    <h3> this is second heading</h3>
+        <p> this is also a paragraph</p>
+    <h5> this is second heading</h5>
+        <p> this is also a paragraph</p>
+  </body>
+</html>
+
+<!-- // Ordered lists: <ol> <li>
+// Unordered lists: <ul> <li>
+// See Codecademy HTML Basics II (6/16) -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nested lists</title>
+  </head>
+  <body>
+    <ol>
+      <li>Dad's interests
+        <ul>
+          <li>football</li>
+          <li>knitting</li>
+        </ul>
+      </li>
+      <li>Mom's interests
+        <ul>
+          <li>hating football</li>
+          <li>skydiving</li>
+        </ul>
+      </li>
+    </ol>
+    <ul>
+       <li>Favorite Boy's Names</li>
+            <ol>
+                <li>Andrew</li>
+            </ol>
+       <li>Favorite Girls' Names'</li>
+                <li>Samantha</li>
+    </ul>
+  </body>
+</html>
+
+<!-- // In line styling
+// color: 
+//font-size:
+//font-family: 
+//background-color:
+//text-align: center, left, right
+// <tag style= "color: green; font-size: 16px"> blah </tag> -->
+
+<body style="background-color:brown">
+  <h1 style="color:green; font-size: 16px; font-family:Verdana;">Big Heading</h1>
+    <p style="color:violet">A giant bear and a little duck
+  <h2 style="text-align:center"
+</body> 
+
+<!-- 
+// TABLES, DIVS, SPANS
+
+// <table> <tr> <td> add rows, more columns using td
+// <thead> <tbody>  
+// <th colspan="2"> names the table overall, identifies how many columns
+// style the table heads as well  -->
+
+<html>
+    <head>
+        <title>Table Time</title>
+    </head>
+    <body>
+        <table style="border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th colspan="2"; style="color:red">Famous Monsters by Birth Year</th>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <th style="padding:5px;"><em>Famous Monster</em></th>
+                    <th style="padding:5px;border-left:1px solid black;"><em>Birth Year</em></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding:5px;">King Kong</td>
+                    <td style="padding:5px;border-left:1px solid black;">1933</td>     
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px;">Dracula</td>
+                    <td style="padding:5px;border-left:1px solid black;">1897</td>
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px;">Bride of Frankenstein</td>
+                    <td style="padding:5px;border-left:1px solid black;">1944</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+<!-- DIVS (short for Division)
+One of the most versatile structure tags available to you is the <div></div> tag. Short for "division," <div> allows you to divide your page into containers (that is, different pieces) -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result</title>
+  </head>
+  <body>
+    <div style="width:50px; height:50px; background-color:red"></div>
+    <div style="width:50px; height:50px; background-color:blue"></div>
+    <div style="width:50px; height:50px; background-color:green"></div>
+    <a href= "www.facebook.com"><div style="width:50px; height:50px; background-color:yellow"></div></a>
+  </body>
+</html>
+
+<!-- SPANS
+While <div> allows you to divide your webpage up into pieces you can style individually, <span> allows you to control styling for smaller parts of your page, such as text
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <p>This text is black, except for the word <span style="color:red">red</span>!</p>
+    <p>My favorite font is <span style="font-type:Futura">Futura</span>!</p>
+  </body>
+</html>
+
+<!-- Recap of all three (see HTML Basics III 15/15)
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ye Olde Fancye Booke</title>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+  </head>
+  <body>
+    <h3>Ye Olde Storye</h3>
+    <p><span>A</span> long time ago there was an intrepid young student who wanted to learn CSS...</p>
+  </body>
+</html>
+
+//////////////////////////////////////////
+

@@ -1,0 +1,281 @@
+/*In the beginning of the HTML document*/
+
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+  <head>
+  <body>
+  </body>
+</html>
+
+/*CSS Selectors 
+Any HTML element is a selector 
+
+/*CSS Properties
+Properties that get styled: font-size, borders, etc EVERYTHING;
+*/
+
+Element/attribute selectors, Class selectors, or ID selectors
+
+element {
+  color: red;
+}
+
+.class {
+  color: red;
+}
+
+#id {
+  color: red;
+}
+
+/*
+Multiple/nested selectors
+E.g. select only the h3 header nested inside three <div>s and change its color to red.*/
+
+div div div h3 {
+  color: red;
+}
+
+/*Asterix, the universal selector
+apply CSS styling to every element on the page*/
+
+* {
+    border:1px dashed #3A5FCD;
+}
+
+/*CASCADING*/
+
+/*regarding Children/Sibling/Parent relationship of HTML elements (see the text above html_codecademy.html doc)
+E.g. On the CSS tab, target ONLY the links that are children of <li>s and*/
+
+li a {
+    text-decoration: none;
+    font-family: cursive;
+}
+
+/*Synopsis: When you set a property of a selector like 'p' to a certain value, that value applies to all p tags. If, however, you change that same property to a different value for a more specific instance of p, that change will override the 'general rule'.
+
+Example code below:
+
+Make all <p> tags have a font-family of Garamond
+
+Make the paragraphs in the unordered list have the color #000000 and text-decoration underline.*/
+
+p {
+    font-family:Garamond;
+}
+
+body > p{
+    font-weight:bold;
+}
+
+div > p{
+    font-weight:bold;
+    color:#7AC5CD;
+}
+
+ul p {
+    color:#000000;
+    text-decoration:underline;
+}
+
+
+/*Styling elements vs styling classes*/
+
+/*Styling elements */
+div p {
+  position: relative;
+  margin-top: 40px;
+  font-size: 12px;
+}
+
+/*Styling classes*/
+.friend {
+  border: 2px dashed green;
+}
+
+/*Styling IDs*/
+#best_friend {
+  border: 4px solid #00C957;
+}
+
+/*Assigning classes and IDs to HTML elements 
+*/
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <title>My Social Network</title>
+  </head>
+  <body>
+        <div class="friend" id="best_friend"></div>
+        <div class="family"></div>
+        <div class="enemy" id="archnemesis"></div>
+  </body>
+</html>
+
+/*CSS Positioning */
+
+/*The inline-block value allows you to put several block elements on the same line. The inline value places all your elements next to one another, but not as blocks: they don't keep their dimensions.
+
+display property:
+inline block, inline, none*/
+
+div {
+  height: 50px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+  /*Add your CSS here!*/
+  display: inline-block;
+}
+/*
+
+Margins, Borders, and Padding 
+
+MARGIN
+
+The margin is the space around the element. The larger the margin, the more space between our element and the elements around it. We can adjust the margin to move our HTML elements closer to or farther from each other.
+
+BORDER
+
+The border is the edge of the element. It's what we've been making visible every time we set the border property.
+
+PADDING
+
+The padding is the spacing between the content and the border. We can adjust this value with CSS to move the border closer to or farther from the content.
+
+CONTENT
+
+The content is the actual "stuff" in the box. If we're talking about a <p> element, the "stuff" is the text of the paragraph.
+
+You'll see abbreviations like TM, TB, and TP in the diagram. These stand for "top margin," "top border," and "top padding." As we'll see, we can adjust the top, right, left, and bottom padding, border, and margin individually.*/
+
+Margins
+
+/*margin to auto:
+this tells the document to automatically put equal left and right margins on our element*/
+
+div {
+  height: 50px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #308014;
+  margin: auto;
+}
+
+/*margin top, right, bottom, left
+*/
+
+div {
+  height: 50px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #308014;
+  margin: 20px 50px 10px 5px;
+}
+
+Borders 
+
+/*
+example: Change your div's border to 4 pixels wide and solid, with the hex color #FF0000.*/
+
+div {
+  height: 50px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #308014;
+  margin: 20px 50px 10px 5px;`
+  border: 4px solid #FF0000;
+}
+
+Padding
+
+/*Set like margins 
+if you want your padding to be the same for all four sides, you can declare that value only once. padding: 10px*/
+
+Negative values
+
+/*When you give CSS a positive padding or margin value, it puts that space between the element and its reference: for instance, if you have a <div> and you give it a margin-left of 20px, it puts twenty pixels between the left margin of that <div> 
+
+Use negative values to move element in the other direction*/
+
+div {
+    border: 1px solid black;
+    background-color:#CC0000;
+    margin: 10px 5px 5px 50px;
+    padding: 0px 30px 0px 10px;
+}
+
+float: 
+/*
+When you float an element on the page, you're telling the webpage: "I'm about to tell you where to put this element, but you have to put it into the flow of other elements." This means that if you have several elements all floating, they all know the others are there and don't land on top of each other.
+
+use floated elements to naturally divide our pages into different sections. They get out of each others' way*/
+
+div {
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #308014;
+  float: right;
+  /*Add your CSS here!*/
+}
+
+p {
+  font-family: Verdana, sans-serif;
+  font-size: 20px;
+  width: 280px;
+  float: left;
+  /*Add your CSS here!*/
+}
+
+Clear
+
+for mixing float with non float elements
+/*If you tell an element to clear: left, it will immediately move below any floating elements on the left side of the page; it can also clear elements on the right. If you tell it to clear: both, it will get out of the way of elements floating on the left and right!*/
+
+element {
+    clear: /*right, left, or both*/
+}
+
+
+
+
+more complex positioning methods...
+
+Static
+
+/*If you don't specify an element's positioning type, it defaults to static. This just means "where the element would normally go." If you don't tell an element how to position itself, it just plunks itself down in the document.
+*/
+
+Absolute positioning
+
+/*When an element is set to position: absolute, it's then positioned in relation to the first parent element it has that doesn't have position: static. If there's no such element, the element with position: absolute gets positioned relative to <html>.*/
+
+/*Example
+See the nested divs*/
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <title>Result</title>
+  </head>
+  <body>
+    <div id="outer"><div id="inner"></div></div>
+  </body>
+</html>
+
+Relative positioning 
+
+/*Relative positioning is more straightforward: it tells the element to move relative to where it would have landed if it just had the default static positioning.*/
+
+Fixed positioning
+
+/*Finally, fixed positioning anchors an element to the browser window—you can think of it as gluing the element to the screen. If you scroll up and down, the fixed element stays put even as other elements scroll past.*/

@@ -34,6 +34,8 @@ function partition(items, left, right) {
   i = left,
   j = right;
 
+  console.log("this is the pivot: " + pivot);
+
     while (i <= j) {
 
       // execute these while loops first. Sets up the i and j that will be compared in the if block below
@@ -41,10 +43,12 @@ function partition(items, left, right) {
       // keep i++, stop when items[i] !< pivot. This is i
       while (items[i] < pivot) {
         i++;
+        console.log("this is i " + i);
       }
-      // keep j++, stop when items[j] !> pivot. This is j
+      // keep j--, stop when items[j] !> pivot. This is j
       while (items[j] > pivot) {
         j--;
+        console.log("this is j " + j);
       }
 
       // 
@@ -56,15 +60,23 @@ function partition(items, left, right) {
         // after the swap, both pointers shift one space
         // i++, j--, run the overall while loop again
         i++;
+        console.log("this is i after swap" + i);
         j--;
+        console.log("this is j after swap" + j);
+        console.log("this is the array: " + items);
       } 
+
+      // else break is pretty much implied here
 
     }
 
     // left pointer is returned as index, and will be used to determine where to partition next
-    return i;   
+    console.log("this is the array: " + items);
+    return i; 
 
 };
+
+partition([1, 2, 3, 6, 5, 7, 8, 4, 9], 0, 8);
 
 /*
 params 
@@ -103,6 +115,6 @@ function quickSort (items, left, right) {
 
 }
 
-var items = [4, 2, 6, 5, 3, 9];
+var items = [1, 2, 3, 6, 5, 7, 8, 4, 9, 12, 345, 2341, 64,12];
 var result = quickSort(items, 0, items.length - 1);
 console.log(result);
