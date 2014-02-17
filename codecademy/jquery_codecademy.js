@@ -1,10 +1,14 @@
 // jQuery 
 
+// Library for interactive JS features
+
 // Language + Terms 
 
 // Example below:
-// .click() = "Event handler" on an element, they handle jQuery events
-// .fadeOut() = "jQuery Event", the actual event that occurs
+// "Event handler" on an element, they handle jQuery events = 
+//.click()
+// "jQuery Event", the actual event that occurs
+//.fadeOut() 
 $(document).ready(function() {
     $('div').click(function() {
         $(this).fadeOut('slow');
@@ -331,4 +335,110 @@ $(document).ready(function(){
 });
 
 //.keydown() event & .animate() effect
+
+// .animate() effect takes two inputs: 
+//1. the animation to perform, and 
+//2. the time in which to perform the animation
+// Syntax:
+$(document).ready(function() {
+   $('div').animate({left:'+=10px'},500);
+});
+
+// Example:
+// After setting up with $(document).ready(), call the .keydown() event on $(document). (We want the whole document object to respond whenever a key is pressed.)
+// Inside your .keydown() handler, .animate() your 'div' with the same inputs as above: {left:'+=10px'} and 500.
+
+$(document).ready(function(){
+    $(document).keydown(function(){
+        $('div').animate({left:'+=10px'}, 500)
+    });
+});
+
+// Using keys to move Mario around:
+
+
+$(document).ready(function() {
+    $(document).keydown(function(key) {
+        switch(parseInt(key.which,10)) {
+            // numeric keycode for "a"
+            case 65:
+                // "remove 10 px to the left margin, moving it left"
+                $('img').animate({left: "-=10px"}, 'fast');
+                break;
+            //  numeric keycode for "w"
+            case 83:
+                $('img').animate({top: "+=10px"}, 'fast');
+                break;
+            //  numeric keycode for "s"     
+            case 87:
+                $('img').animate({top: "-=10px"}, 'fast');
+                break;
+            //  numeric keycode for "d"
+            case 68:
+                $('img').animate({left: "+=10px"}, 'fast');
+                break;
+            default:
+                break;
+        }
+    });
+});
+
+
+/////////////////////////////////////
+////////// jQuery Effects ///////////
+/////////////////////////////////////
+
+// Make the elevator image move down 100px in 1 second
+$(document).ready(function(){
+    $('img').animate({top:'+=100px'}, 1000);
+});
+
+// jQuery UI Library 
+// uses .effect()
+// Here: http://jqueryui.com/
+// Include an extra <script> tag to include the library
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+// .explode()
+// "Make Krypton explode when you click it"
+$(document).ready(function(){
+    $('div').click(function(){
+        $(this).effect('explode');
+    });
+});
+
+// .bounce()
+// Change your 'explode' to a bounce, and make it so Krypton bounces three times in 500 milliseconds when you click on it.
+
+$(document).ready(function(){
+    $('div').click(function(){
+        $(this).effect('bounce', {times:3}, 500);
+    });
+});
+
+//.slide()
+
+// .accordion()
+$(document).ready(function() {
+    $("#menu").accordion({collapsible: true, active: false});
+});
+
+// .draggable()
+
+// .resizable()
+// Makes elements resizable
+
+// .selectable()
+// Can select elements and have them color (?)
+
+// .sortable - allows you to drag drop sort elements 
+$(document).ready(function(){
+    $("ol").sortable();
+})
+
+//.accordion() - slick accordion drop down 
+// <div id="menu"> - couple of elements under this div 
+$(document).ready(function(){
+   $('#menu').accordion(); 
+});
 

@@ -279,3 +279,12 @@ Relative positioning
 Fixed positioning
 
 /*Finally, fixed positioning anchors an element to the browser window—you can think of it as gluing the element to the screen. If you scroll up and down, the fixed element stays put even as other elements scroll past.*/
+
+CSS States
+
+/* the hover button on abduzeedo.com */
+
+a.submit:hover {
+color: #fff;
+background: #111;
+}
