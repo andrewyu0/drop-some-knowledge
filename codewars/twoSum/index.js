@@ -24,3 +24,17 @@ function twoSum(numbers, target) {
 
 // twoSum([1,2,3], 4) // [0, 2]
 twoSum([1,20,3,4,5,6,500], 10) // [3, 5]
+
+
+////////////
+
+// other answers 
+x
+function twoSum(numbers, target) {
+  for(var i=0; i<numbers.length; i++){
+    for(var j=0; j<numbers.length; j++){
+      if(i==j) continue;
+      if(numbers[i] + numbers[j]==target) return[i, j];
+    }
+  }
+}
